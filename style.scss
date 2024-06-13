@@ -20,8 +20,9 @@ body{
     padding: 0;
     color: var(--black-color);
     position: relative;
-    // user-select: none;
+    user-select: none;
     color: var(--primary-color);
+    min-height: 100vh;
 }
 
 *{
@@ -280,6 +281,10 @@ footer{
     align-items: center;
     padding: .5rem;
     gap: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 
     h1{
         font-family: "Kaushan Script";
@@ -291,6 +296,19 @@ footer{
         .social{
             display: flex;
             gap: 1rem;
+
+            .social-wrapper {
+                width: 2rem;
+                height: 2rem;
+                overflow: hidden;
+                border-radius: 50%; 
+            
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover; 
+                }
+            }
         }
     }
 }
@@ -397,6 +415,10 @@ footer{
         .recipes {
             display: none;
             margin-top: 1rem;
+
+            P{
+                font-size: 1.5rem;
+            }
         }
 
         &.show-recipes {
@@ -417,4 +439,158 @@ footer{
     font-family: "Kaushan Script";
     text-align: center;
     font-size: 4rem;
+}
+
+.aboutus-hero{
+    position: relative;
+
+
+    .img-wrapper{
+        position: relative;
+        width: 100%;
+        height: 20rem;
+        overflow: hidden;
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .title{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "Kaushan Script";
+        color: var(--white-color);
+        font-size: 4rem;
+        text-wrap: nowrap;
+    }
+
+
+}
+
+.info-aboutus{
+
+    p{
+        font-size: 1.2rem;
+        text-align: center;
+
+        span{
+            font-family: "Kaushan Script";
+            font-size: 1.5rem;
+        }
+    }
+
+    .mb{
+        margin-bottom: 2.5rem;
+    }
+}
+
+
+.contact-hero {
+    position: relative;
+    height: 50rem;
+
+    .title{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "Kaushan Script";
+        color: var(--white-color);
+        font-size: 4rem;
+        text-wrap: nowrap;
+    }
+
+    .img-wrapper {
+        position: relative;
+        width: 100%;
+        height: 20rem;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2rem;
+        border-radius: 8px;
+        width: 400px;
+        margin: 0 auto;
+        text-align: center;
+
+        h1 {
+            color: var(--white-color);
+            font-size: 4rem;
+            font-family: "Kaushan Script";
+            margin-bottom: 2rem;
+        }
+
+        .form-container {
+            background-color: var(--primary-color);
+            padding: 2rem;
+
+            p {
+                color: var(--white-color);
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+
+            input[type="text"],
+            textarea {
+                display: block;
+                width: 100%;
+                padding: 1rem;
+                margin-bottom: 1rem;
+                border: none;
+                border-radius: 5px;
+                background-color: var(--white-color);
+                color: var(--black-color);
+                font-size: 1rem;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &::placeholder {
+                    color: var(--black-color);
+                }
+            }
+
+            button {
+                background-color: var(--white-color);
+                color: var(--primary-color);
+                padding: 0.8rem 2rem;
+                border: none;
+                border-radius: 5px;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: all .1s linear;
+
+                &:hover {
+                    background-color: var(--secondary-color);
+                    color: var(--white-color);
+                }
+            }
+        }
+    }
+}
+
+.recipe-body{
+    @media (max-width:1300px) {
+         min-height: 150vh;
+    }
+    @media (max-width:612px) {
+         min-height: 200vh;
+    }
 }
