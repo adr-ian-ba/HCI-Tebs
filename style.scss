@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Kaushan+Script&display=swap');
+
+:root{
+    --primary-color : #BA312A;
+    --secondary-color : #F55758;
+
+    --black-color : #000000E6;
+    --white-color: #FAFEFE;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    font-family: "Boogaloo", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--black-color);
+    position: relative;
+    // user-select: none;
+    color: var(--primary-color);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+
+button{
+    cursor: pointer;
+}
+
+section{
+    position: relative;
+    @media (min-width: 320px) {
+        padding: 0 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+        padding: 0 3rem;
+    }
+
+    @media (min-width: 1024px) {
+        padding: 0 10rem;
+    }
+
+    @media (min-width: 1440px) {
+        padding: 0 15rem;
+    }
+}
+
+nav{
+    position: relative;
+    z-index: 100 !important;
+    overflow: hidden;
+
+    border-top: 5px solid var(--primary-color);
+    .desktop{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 2rem 0 2rem;
+        background-color: var(--white-color);
+        padding-bottom: 1rem;
+
+
+        .logo-wrapper{
+            font-family: "Kaushan Script";
+            font-size: 1.5rem;
+
+            color: var(--primary-color);
+        }
+
+        ul{
+            display: flex;
+            gap: 1rem;
+
+            a{
+                padding: .1rem .5rem;
+                font-size: 1.5rem;
+                color: var(--primary-color);
+            }
+        }
+    }
+
+    .mobile{
+        position: relative;
+        z-index: 100;
+        display: none;
+
+        .outer{
+            border-top: 5px solid var(--primary-color);
+            // position: fixed;
+            // top: 0;
+            // left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem 0 2rem;
+            background-color: var(--white-color);
+
+            .logo-wrapper{
+                font-family: "Kaushan Script";
+                font-size: 1.5rem;
+
+                color: var(--primary-color);
+
+            }
+
+            svg{
+                padding: 1rem;
+                cursor: pointer;
+                width: 4rem;
+                height: 4rem;
+                color: var(--black-color);
+            }
+        }
+
+        .middle{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba($color: #000000, $alpha: .5);
+            display: none;
+        }
+
+        .inner{
+            transition: all .2s linear;
+            position: fixed;
+            top: 0;
+            right: 100%;
+
+            background-color: var(--white-color);
+            height: 100vh;
+            width: 40%;
+
+            padding-bottom: 1rem;
+
+
+            ul{
+                padding-top: 5rem;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                
+                a{
+                    padding: .1rem .5rem;
+                    font-size: 1.5rem;
+                    color: var(--primary-color);
+                    transition: all .1s linear;
+
+                    
+                    &:hover{
+                        background-color: var(--secondary-color);
+                        color: var(--white-color);
+                    }
+
+                    li{
+                        padding: 1rem;
+                        transition: all .1s linear;
+
+                    }
+                }
+
+                .download{
+                    background-color: var(--secondary-color);
+                }
+            }
+        }
+    }
+
+        //small navbar
+        @media (max-width: 900px){
+            .desktop{
+                display: none;
+            }
+
+            .mobile{
+                display: block;
+            }
+        }
+}
+
+#picked{
+    color: var(--secondary-color) !important;
+}
+
+#picked-mobile{
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+
+.hero{
+    position: relative;
+
+    .img-wrapper {
+        width: 100%;
+        height: 50rem; 
+        overflow: hidden;
+
+        img {
+            width: 100%;  
+            height: 100%;  
+            object-fit: fill; 
+        }
+    }
+
+    .card-container{
+        color: var(--primary-color);
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        @media (max-width:900px) {
+            flex-direction: column;
+            top: 60%;
+        }
+
+
+        .card{
+            background-color: var(--white-color);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            height: 20rem;
+            width: 25rem;
+            justify-content: space-between;
+
+            .img-wrapper{
+                height: 10rem;
+                width: 10rem;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                    filter: drop-shadow(-12px 7px 4px #6b6b6b);            
+                }
+            }
+            .info{
+
+               h1{
+                text-align: center;
+               }
+            }
+        }
+    }
+}
+
+.no-wrap-text{
+    text-wrap: nowrap;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    align-items: center;
+    padding: .5rem;
+    gap: 1rem;
+
+    h1{
+        font-family: "Kaushan Script";
+    }
+
+    .info{
+        text-align: end;
+
+        .social{
+            display: flex;
+            gap: 1rem;
+        }
+    }
+}
+
+.footer-home{
+    margin-top: 8rem;
+
+}
+.nav-divider{
+    margin-top: 10rem;
+}
+
+.h1-divider{
+    background-color: var(--primary-color) !important;
+    color: var(--white-color);
+    font-size: 2.4rem;
+    padding: 0.5rem 0;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.card-section{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-bottom: 2rem;
+
+    .card{
+        img{
+            width: 15rem;
+        }
+
+        h3{
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        p{
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.recipe-holder {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 8px;
+
+        .img-wrapper {
+            height: 10rem;
+            width: 10rem;
+            border-radius: 50%;
+            overflow: hidden;
+
+            img {
+                aspect-ratio: 1 / 1;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 2rem;
+            line-height: 1.2;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            font-family: "Kaushan Script";
+            gap: 0.5rem;
+            cursor: pointer;
+
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+                transition: transform 0.3s;
+            }
+        }
+
+        .recipes {
+            display: none;
+            margin-top: 1rem;
+        }
+
+        &.show-recipes {
+            .recipes {
+                display: block;
+            }
+
+            .button {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
+
+.update{
+    font-family: "Kaushan Script";
+    text-align: center;
+    font-size: 4rem;
+}
