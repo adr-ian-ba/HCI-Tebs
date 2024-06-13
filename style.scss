@@ -212,12 +212,13 @@ nav{
 
     .img-wrapper {
         width: 100%;
-        max-height: 50rem;
+        max-height: 50rem !important;
+        overflow: hidden;
 
         img {
             width: 100%;  
             height: 100%;  
-            object-fit: cover; 
+            object-fit: fill; 
         }
     }
 
@@ -281,10 +282,6 @@ footer{
     align-items: center;
     padding: .5rem;
     gap: 1rem;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
 
     h1{
         font-family: "Kaushan Script";
@@ -314,7 +311,7 @@ footer{
 }
 
 .footer-home{
-    margin-top: 10rem;
+    margin-top: 15rem;
 }
 .nav-divider{
     margin-top: 10rem;
@@ -438,6 +435,7 @@ footer{
     font-family: "Kaushan Script";
     text-align: center;
     font-size: 4rem;
+    padding-bottom: 10rem;
 }
 
 .aboutus-hero{
@@ -519,7 +517,7 @@ footer{
 
     .form {
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 2rem;
@@ -585,11 +583,10 @@ footer{
     }
 }
 
-.recipe-body{
-    @media (max-width:1300px) {
-         min-height: 150vh;
-    }
-    @media (max-width:612px) {
-         min-height: 200vh;
-    }
+.last-aboutus{
+    padding-bottom: 8rem;
+}
+
+.contact-hero{
+    padding-bottom: 56rem;
 }

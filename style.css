@@ -186,13 +186,14 @@ nav .mobile .inner ul .download {
 }
 .hero .img-wrapper {
   width: 100%;
-  max-height: 50rem;
+  max-height: 50rem !important;
+  overflow: hidden;
 }
 .hero .img-wrapper img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .hero .card-container {
   color: var(--primary-color);
@@ -248,10 +249,6 @@ footer {
   align-items: center;
   padding: 0.5rem;
   gap: 1rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
 }
 footer h1 {
   font-family: "Kaushan Script";
@@ -277,7 +274,7 @@ footer .info .social .social-wrapper img {
 }
 
 .footer-home {
-  margin-top: 10rem;
+  margin-top: 15rem;
 }
 
 .nav-divider {
@@ -382,6 +379,7 @@ footer .info .social .social-wrapper img {
   font-family: "Kaushan Script";
   text-align: center;
   font-size: 4rem;
+  padding-bottom: 10rem;
 }
 
 .aboutus-hero {
@@ -450,7 +448,7 @@ footer .info .social .social-wrapper img {
 }
 .contact-hero .form {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 2rem;
@@ -512,13 +510,10 @@ footer .info .social .social-wrapper img {
   color: var(--white-color);
 }
 
-@media (max-width: 1300px) {
-  .recipe-body {
-    min-height: 150vh;
-  }
+.last-aboutus {
+  padding-bottom: 8rem;
 }
-@media (max-width: 612px) {
-  .recipe-body {
-    min-height: 200vh;
-  }
+
+.contact-hero {
+  padding-bottom: 56rem;
 }/*# sourceMappingURL=style.css.map */
