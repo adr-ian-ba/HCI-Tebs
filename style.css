@@ -186,14 +186,13 @@ nav .mobile .inner ul .download {
 }
 .hero .img-wrapper {
   width: 100%;
-  height: 50rem;
-  overflow: hidden;
+  max-height: 50rem;
 }
 .hero .img-wrapper img {
   width: 100%;
   height: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .hero .card-container {
   color: var(--primary-color);
@@ -208,7 +207,7 @@ nav .mobile .inner ul .download {
 @media (max-width: 900px) {
   .hero .card-container {
     flex-direction: column;
-    top: 60%;
+    top: 70%;
   }
 }
 .hero .card-container .card {
@@ -278,7 +277,7 @@ footer .info .social .social-wrapper img {
 }
 
 .footer-home {
-  margin-top: 8rem;
+  margin-top: 10rem;
 }
 
 .nav-divider {
